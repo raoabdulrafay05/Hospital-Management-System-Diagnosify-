@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appointment Lookup</title>
+  <link rel="stylesheet" href="/static/appointment_delete_id_form.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="modern-container">
+    <h1>Lookup Appointment</h1>
+    <form action="/delete_appointment" method="POST" class="modern-form">
+      <label for="appointment_id">Appointment ID</label>
+      <input type="number" name="appointment_id" id="appointment_id" placeholder="Enter ID" required />
+      <button type="submit" class="submit-btn">Delete Appointment</button>
+    </form>
+    <div class="nav-buttons">
+      <button onclick="window.location.href='/appointment_scheduling'" class="nav-btn">Back to Scheduling</button>
+      <button onclick="window.location.href='/'" class="nav-btn secondary">Home</button>
+    </div>
+  </div>
+</body>
+</html>

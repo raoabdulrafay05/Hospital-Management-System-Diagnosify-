@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+    <link rel="stylesheet" href="/static/appointment_scheduling.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Appointment Scheduling</h1>
+
+        <!-- Appointment Form -->
+        <div class="form-container">
+            <h2>Schedule a New Appointment</h2>
+            <form action="/add_appointment" method="POST">
+                <input type="text" name="patientid" placeholder="Patient ID" required><br>
+                <input type="text" name="doctorid" placeholder="Doctor ID" required><br>
+                <input type="date" name="appointmentdate" required><br>
+                <input type="time" name="timeslot" required><br>
+                <select name="status" required>
+                    <option value="Scheduled">Scheduled</option>
+                </select>                
+                </select><br>
+                <button type="submit" class="add-appointment-btn">Add Appointment</button>
+            </form>
+        </div>
+
+        <!-- Appointment Management Buttons -->
+        <div class="button-container">
+            <button onclick="window.location.href='/view_appointments'">View All Appointments</button>
+            <button onclick="window.location.href='/edit_appointment'">Edit Appointment</button>
+            <button onclick="window.location.href='/delete_appointment'">Delete Appointment</button>
+            <button onclick="window.location.href='/view_appointment_details'">View Appointment</button>
+        </div>
+
+        <!-- Back to Home Button -->
+        <button class="home-button" onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>
