@@ -1,0 +1,78 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 40%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 28px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.button-container a button {
+    background: linear-gradient(45deg, #1e90ff, #00c6ff);
+}
+
+.button-container a button:hover {
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
