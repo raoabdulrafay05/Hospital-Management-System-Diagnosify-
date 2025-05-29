@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Management</title>
+    <link rel="stylesheet" href="/static/billing_management.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <h1 class="title">Billing Management</h1>
+
+    <!-- Add New Bill Form -->
+    <div class="form-container">
+        <form action="/add_bill" method="POST">
+            <input type="number" name="patient_id" placeholder="Patient ID" required><br>
+            <input type="number" name="appointment_id" placeholder="Appointment ID" required><br>
+            <input type="number" name="pharmacy_id" placeholder="Pharmacy ID" required><br>
+            <input type="number" name="lab_test_id" placeholder="Lab Test ID" required><br>
+            <input type="date" name="bill_date" placeholder="Bill Date" required><br>
+            <select name="payment_status" required>
+                <option value="Unpaid">Unpaid</option>
+            </select><br>
+            <button type="submit" class="add-bill-btn">Add Bill</button>
+        </form>
+    </div>
+
+    <!-- Bill Management Buttons -->
+    <div class="button-container">
+        <button onclick="window.location.href='/view_all_bills'">View All Bills</button>
+        <button onclick="window.location.href='/find_bill'">Find a Bill</button>
+        <button onclick="window.location.href='/enter_bill_id'">Edit Bill</button>
+        <button onclick="window.location.href='/delete_bill'">Delete Bill</button>
+    </div>
+
+    <!-- Back to Home Button -->
+    <button class="home-button" onclick="window.location.href='/'">Back to Home</button>
+</div>
+
+</body>
+</html>

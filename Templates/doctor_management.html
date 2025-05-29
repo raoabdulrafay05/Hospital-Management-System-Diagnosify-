@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Management</title>
+    <link rel="stylesheet" href="/static/doctor_management.css" />
+  </head>
+  <body>
+    <div class="form-container">
+        <h2>Add a New Doctor</h2>
+        <form action="/add_doctor" method="POST">
+            <label for="fullname">Full Name:</label>
+            <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Full Name"
+                required
+            /><br />
+    
+            <label for="specialization">Specialization:</label>
+            <input
+                type="text"
+                id="specialization"
+                name="specialization"
+                placeholder="Specialization"
+                required
+            /><br />
+    
+            <label for="phoneno">Phone No:</label>
+            <input
+                type="text"
+                id="phoneno"
+                name="phoneno"
+                placeholder="Phone No"
+                required
+            /><br />
+    
+            <label for="Email">Email:</label>
+            <input
+                type="email"
+                id="Email"
+                name="Email"
+                placeholder="Enter Doctor's Email"
+                required
+            /><br />
+    
+            <label for="departmentid">Department ID:</label>
+            <input
+                type="number"
+                id="departmentid"
+                name="departmentid"
+                placeholder="Enter Department ID"
+                required
+            /><br />
+    
+            <label for="DoctorFee">Doctor Fee:</label>
+            <input
+                type="number"
+                id="DoctorFee"
+                name="DoctorFee"
+                placeholder="Enter Doctor Fee"
+                required
+            /><br />
+    
+            <label for="Salary">Salary:</label>
+            <input
+                type="number"
+                id="Salary"
+                name="Salary"
+                placeholder="Enter Doctor's Salary"
+                required
+            /><br />
+    
+            <button type="submit" class="add-doctor-btn">Add Doctor</button>
+        </form>
+    </div>    
+
+      <!-- Doctor Management Buttons -->
+      <div class="button-container">
+        <button onclick="window.location.href='/view_all_doctors'">
+          View All Doctors
+        </button>
+        <button onclick="window.location.href='/view_doctor_details'">
+          View Doctor Details
+        </button>
+        <button onclick="window.location.href='/edit_doctor'">
+          Edit Doctor Details
+        </button>
+        <button onclick="window.location.href='/delete_doctor'">
+          Delete Doctor
+        </button>
+      </div>
+
+      <!-- Back to Home Button -->
+      <button class="home-button" onclick="window.location.href='/'">
+        Back to Home
+      </button>
+    </div>
+  </body>
+</html>

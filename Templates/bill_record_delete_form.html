@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Bill Record</title>
+    <link rel="stylesheet" href="/static/delete_bill.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Delete Bill Record</h1>
+        <form method="POST">
+            <label for="bill_id">Enter Bill ID to Delete:</label>
+            <input type="text" id="bill_id" name="bill_id" required>
+            <button type="submit">Delete</button>
+        </form>
+
+        <div class="button-container">
+            <a href="/" class="home-button">
+                <button type="button">Home</button>
+            </a>
+            <a href="/billing" class="billing-button">
+                <button type="button">Billing Management</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
