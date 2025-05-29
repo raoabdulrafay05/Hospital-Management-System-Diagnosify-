@@ -1,0 +1,175 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #5e84a9; /* Dark Blue background */
+    color: #e0e0e0; /* Light grayish text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    background: #1a2b3d; /* Dark container background */
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Borders Effect */
+.container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #2d586c, #9c27b0, #ffeb3b); /* Blue, Purple, Yellow gradient */
+    z-index: -1;
+    filter: blur(20px);
+    animation: glowing-border 2s ease-in-out infinite;
+}
+
+@keyframes glowing-border {
+    0% {
+        box-shadow: 0 0 15px rgba(3, 169, 244, 0.8), 0 0 30px rgba(156, 39, 176, 0.8), 0 0 45px rgba(255, 235, 59, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgb(136, 244, 3), 0 0 60px rgba(156, 39, 176, 1), 0 0 90px rgba(255, 235, 59, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(3, 169, 244, 0.8), 0 0 30px rgba(156, 39, 176, 0.8), 0 0 45px rgba(255, 235, 59, 0.8);
+    }
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(3, 169, 244, 0.8), 0 0 25px rgba(156, 39, 176, 0.8), 0 0 35px rgba(255, 235, 59, 0.8);
+}
+
+/* Input Fields Styling */
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin: 16px 0;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #212d3b; /* Dark input background */
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    border: 2px solid #ffeb3b; /* Bright Yellow border */
+    background-color: #2a3a50; /* Darker background on focus */
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(45deg, #9c27b0, #03a9f4);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffeb3b, #9c27b0);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(3px);
+}
+
+/* Navigation Buttons Styling */
+.button-container {
+    margin-top: 30px;
+}
+
+.button-container button {
+    background-color: transparent;
+    border: 2px solid #78a5bd;
+    padding: 12px 30px;
+    margin: 12px 0;
+    border-radius: 5px;
+    color: #062737;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.button-container button:hover {
+    background-color: #9a3131;
+    border-color: #03a9f4;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.button-container button:active {
+    transform: translateY(2px);
+}
+
+/* Glowing Input Fields on Hover */
+input[type="number"]:hover {
+    border: 2px solid #ffeb3b;
+    background-color: #2a3a50;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input[type="number"] {
+        padding: 14px;
+    }
+
+    button {
+        padding: 14px 20px;
+    }
+
+    .button-container button {
+        padding: 14px 20px;
+    }
+}
