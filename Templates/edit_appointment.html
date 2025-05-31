@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Appointment</title>
+    <link rel="stylesheet" href="/static/edit_appointment.css"> <!-- Link to your custom CSS -->
+</head>
+<body>
+    <h2>Edit Appointment Details</h2>
+
+    <!-- Form to edit the appointment -->
+    <form method="POST" action="/edit_appointment">
+        <!-- Appointment ID field -->
+        <label for="appointment_id">Appointment ID:</label>
+        <input type="text" name="appointment_id" required><br><br>
+
+
+        <!-- Patient ID field -->
+        <label for="patient_id">Patient ID:</label>
+        <input type="text" name="patient_id" required><br><br>
+
+        <!-- Doctor ID field -->
+        <label for="doctor_id">Doctor ID:</label>
+        <input type="text" name="doctor_id" required><br>
+
+        <!-- Appointment Date field -->
+        <label for="appointment_date">Appointment Date:</label>
+        <input type="date" name="appointment_date" required><br>
+
+        <!-- Appointment Time field -->
+        <label for="appointment_time">Appointment Time:</label>
+        <input type="time" name="appointment_time" required><br>
+
+        <!-- Status Dropdown -->
+        <label for="status">Status:</label>
+        <select name="status" required>
+            <option value="scheduled">Scheduled</option>
+            <option value="completed">Completed</option>
+            <option value="canceled">Canceled</option>
+        </select><br>
+
+        <!-- Submit button -->
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <div class="nav-buttons">
+        <button onclick="window.location.href='/appointment_scheduling'">Back to Appointments</button>
+        <button onclick="window.location.href='/'">Home</button>
+    </div>
+
+</body>
+</html>
