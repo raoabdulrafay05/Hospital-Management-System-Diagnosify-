@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(
+    135deg,
+    #2c3e50,
+    #34495e
+  ); /* Dark gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+  color: white;
+}
+
+/* Form Styling */
+form {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 100%;
+  max-width: 480px;
+  transition: all 0.3s ease;
+}
+
+/* Title Styling */
+h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff6f61, #00bcd4); /* Gradient text */
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 2px solid #444;
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border: 2px solid #ff6f61; /* Neon pink glow */
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(
+    45deg,
+    #00bcd4,
+    #ff6f61
+  ); /* Gradient background for buttons */
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff6f61, #00bcd4);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Nav Buttons Styling */
+.nav-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.nav-buttons button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 15px 35px;
+  margin: 10px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons button:hover {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+  transform: translateY(-5px);
+}
+
+.nav-buttons button:active {
+  transform: translateY(2px);
+}
+
+/* Textarea Styling */
+textarea {
+  height: 120px;
+  resize: none;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #444;
+  background-color: transparent;
+  color: white;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border: 2px solid #ff6f61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+/* Input Labels */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
