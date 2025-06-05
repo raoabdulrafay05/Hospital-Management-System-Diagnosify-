@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg,rgb(73, 90, 25),rgb(92, 19, 121)); /* Blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+
+/* Diagnosify Title - 3D Effect */
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #ff512f, #dd2476); /* Gradient Text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes gradient apply only to text */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3); /* 3D Shadow Effect */
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* Logo Styling */
+.logo {
+    width: 130px;  /* Adjusted size to be larger but balanced */
+    height: 130px;
+    object-fit: contain; /* Ensures image fits well inside the frame */
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    margin-bottom: -20px; /* Reduces extra space below the logo */
+}
+
+/* Buttons Container - Improved Spacing */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Centers buttons */
+    gap: 20px;  /* Even spacing between buttons */
+    margin-top: 30px;
+}
+
+/* Button Styling - Modern & Well-Spaced */
+button {
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Vibrant Gradient */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Glass effect */
+    min-width: 250px;  /* Ensures uniform button width */
+    text-align: center;
+}
+
+/* Hover Effects - Glow & Lift */
+button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #ff512f, #dd2476); /* New gradient on hover */
+    box-shadow: 0 12px 25px rgba(255, 81, 47, 0.3);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Animated Shine Effect */
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(25deg);
+    transition: all 0.6s ease-in-out;
+}
+
+/* Shine Effect on Hover */
+button:hover::before {
+    left: 100%;
+}
+
+/* Responsive - Adjusts Button Layout for Small Screens */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 80%; /* Makes buttons full-width on small screens */
+    }
+}

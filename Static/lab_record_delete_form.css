@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  background: linear-gradient(135deg, #ccf2f4, #eafcff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #04364a;
+}
+
+.container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 102, 102, 0.12);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #d0f0f3;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #056676;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2b6777;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #bde0e6;
+  background-color: #f7fcfc;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00a8cc;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #00b8a9;
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #009d91;
+  transform: translateY(-2px);
+}
