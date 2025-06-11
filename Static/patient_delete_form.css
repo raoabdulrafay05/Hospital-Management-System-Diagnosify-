@@ -1,0 +1,112 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc; /* Light background for a fresh look */
+    color: #333; /* Dark text color for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* Container Styling */
+  .container {
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around the form */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* Heading Styling */
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input Styling */
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box; /* Makes padding not affect the width */
+    background-color: #f9f9f9; /* Light background for input fields */
+    transition: all 0.3s ease;
+  }
+  
+  input[type="number"]:focus {
+    border-color: #00bcd4; /* Border turns blue on focus */
+    outline: none;
+    background-color: #ffffff; /* Slight change in background when focused */
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 20px;
+    background-color: #00bcd4; /* Bright button color */
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+    width: 100%; /* Button takes the full width */
+  }
+  
+  button:hover {
+    background-color: #009688; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+  }
+  
+  button:active {
+    transform: translateY(2px); /* Button pressed effect */
+    background-color: #00796b; /* Darker color when clicked */
+  }
+  
+  /* Button Container Styling (For Back Buttons) */
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-container button {
+    width: 48%; /* Make buttons take equal space */
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .button-container button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-3px); /* Hover effect */
+  }
+  
+  .button-container button:active {
+    background-color: #d0d0d0;
+    transform: translateY(2px); /* Pressed effect */
+  }
+  

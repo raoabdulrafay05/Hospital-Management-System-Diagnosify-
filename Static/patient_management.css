@@ -1,0 +1,165 @@
+/* Global Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #7b6ee7, #6a5cd6);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(180, 19, 19, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 50px;
+  text-align: center;
+}
+
+/* Header Text */
+h1.title {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #ff512f, 0px 0px 25px #ff512f, 0px 0px 5px #dd2476;
+  letter-spacing: 3px;
+}
+
+h2.subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Form Styling */
+.form-container {
+  display: block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 30px auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1rem;
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form select {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  cursor: pointer;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #ff512f, #ff5a45);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.button-container button:hover {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.home-button {
+  padding: 12px 30px;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  background-color: #5947b0;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .button-container button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .form-container {
+    width: 90%;
+  }
+}
+
+form select {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Ensure dropdown options are visible */
+form select option {
+  background-color: #fff;
+  color: #000;
+}
