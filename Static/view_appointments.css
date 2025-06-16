@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0d2365, #3d1414); /* A smoother gradient */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1100px; /* Slightly reduced width */
+    background: rgba(255, 255, 255, 0.1); /* Lighter background with more transparency */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1.title {
+    font-size: 2.5rem; /* Slightly smaller font size */
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  table th,
+  table td {
+    padding: 15px; /* Increased padding */
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+    font-size: 14px; /* Slightly smaller font size */
+  }
+  
+  table th {
+    background-color: #053e5c; /* Softer blue */
+    color: white;
+    font-weight: bold;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #9b1315; /* Lighter row color */
+  }
+  
+  table tr:hover {
+    background-color: #208f9d; /* Light blue hover effect */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  button.home-button {
+    padding: 12px 30px;
+    background-color: #333; /* Darker button color */
+    border: none;
+    border-radius: 8px; /* Slightly smaller radius */
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
+  
+  button.home-button:hover {
+    background-color: #00796b; /* Teal hover color */
+    transform: translateY(-2px); /* Slight hover effect */
+  }
+  
+  @media (max-width: 768px) {
+    h1.title {
+      font-size: 2rem; /* Adjust for smaller screens */
+    }
+  
+    table th,
+    table td {
+      font-size: 12px; /* Smaller font size */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    button.home-button {
+      font-size: 0.9rem; /* Adjust button text size */
+      padding: 10px 25px; /* Adjust button size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 20px; /* Reduced padding on smaller screens */
+    }
+  
+    h1.title {
+      font-size: 1.8rem; /* Smaller heading */
+    }
+  
+    table th,
+    table td {
+      font-size: 11px; /* Smaller font size */
+      padding: 8px; /* Reduced padding */
+    }
+  
+    button.home-button {
+      font-size: 0.8rem; /* Even smaller button text */
+      padding: 8px 20px; /* Adjust button size */
+    }
+  }  

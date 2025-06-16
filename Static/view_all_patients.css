@@ -1,0 +1,76 @@
+/* Add to your existing CSS file or create a new one (e.g., styles.css) */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #7b6ee7, #6a5cd6);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(180, 19, 19, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 50px;
+  text-align: center;
+}
+
+h1.title {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #ff512f, 0px 0px 25px #000000, 0px 0px 5px #dd2476;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 1px solid #fff;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #2fafff;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #a54242;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+button.home-button {
+  padding: 12px 30px;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button.home-button:hover {
+  background-color: #5947b0;
+  transform: translateY(-3px);
+}

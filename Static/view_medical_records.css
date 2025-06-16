@@ -1,0 +1,139 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2a3d76, #8e3b46); /* New Gradient */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.12); /* Slight transparency */
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+    transition: all 0.3s ease;
+  }
+  
+  /* Title */
+  h1.title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  th, td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  th {
+    background: linear-gradient(90deg, #6a4c93, #a57dbf); /* Purple gradient */
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  tr:hover {
+    background-color: #515ba5; /* Soft blue hover effect */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Button */
+  .home-button {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 14px 32px;
+    background: linear-gradient(to right, #32b88f, #0a7f5c); /* Green gradient */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+  
+  .home-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #278e75, #60e0b5);
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    h1.title {
+      font-size: 2.2rem;
+    }
+  
+    th, td {
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+  
+    .home-button {
+      padding: 12px 24px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 25px;
+    }
+  
+    h1.title {
+      font-size: 1.8rem;
+    }
+  
+    th, td {
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+  
+    .home-button {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  }
+  

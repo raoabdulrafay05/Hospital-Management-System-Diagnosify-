@@ -1,0 +1,216 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Clean font */
+    background: linear-gradient(135deg, #d1e7e1, #f0f7fc); /* Soft light gradient */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* To position elements like the title */
+}
+
+/* Pharmacy Home Title */
+h1 {
+    position: absolute; /* Position it at the top-left */
+    top: 20px;
+    left: 20px;
+    font-size: 3rem; /* Increase font size */
+    color: #2a3d66; /* Dark blue color */
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Main Content Container */
+.container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    padding: 50px; /* Increased padding */
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 80%; /* Increased width */
+    max-width: 800px; /* Increased max-width */
+    text-align: center;
+}
+
+/* Title inside the container */
+.title {
+    font-size: 2.5rem; /* Adjusted font size */
+    color: #2a3d66; /* Dark blue */
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Fields */
+input[type="text"], 
+input[type="number"], 
+button {
+    width: 80%; /* Adjust width */
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus {
+    border-color: #00b3e3; /* Highlight on focus */
+    box-shadow: 0 0 8px rgba(0, 179, 227, 0.3);
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background: #00b3e3; /* Bright blue */
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 179, 227, 0.4);
+}
+
+button:hover {
+    background: transparent;
+    color: #00b3e3;
+    border: 2px solid #00b3e3;
+    box-shadow: 0 0 25px rgba(0, 179, 227, 0.5);
+}
+
+button:active {
+    background: #008caa; /* Darker blue when clicked */
+    box-shadow: 0 0 15px rgba(0, 179, 227, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.4rem; /* Smaller title on mobile */
+    }
+
+    input[type="text"], 
+    input[type="number"] {
+        font-size: 1rem; /* Adjust input size */
+    }
+
+    button {
+        font-size: 1rem; /* Adjust button size */
+        padding: 12px 25px;
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Hover Effects on Buttons */
+.button-container button {
+    transition: transform 0.3s ease-in-out, background 0.4s ease;
+}
+
+.button-container button:hover {
+    transform: perspective(500px) rotateX(10deg) scale(1.1);
+}
+
+/* Home Button */
+.home-button {
+    margin-top: 20px;
+    background: linear-gradient(45deg, #1e90ff, #00c6ff); /* Blue gradient for home button */
+}
+
+.home-button:hover {
+    box-shadow: 0 8px 20px rgba(30, 144, 255, 0.5);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d1e7e1, #f0f7fc);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2a3d66;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Table Styles */
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #e6f2ff;
+    color: #2a3d66;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eef7ff;
+    transition: background 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
