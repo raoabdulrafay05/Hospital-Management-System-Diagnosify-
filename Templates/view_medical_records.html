@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Medical Records</title>
+  <link rel="stylesheet" href="/static/view_medical_records.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Medical Records</h1>
+    
+    {% if MedicalRecords %}
+      <table>
+        <thead>
+          <tr>
+            <th>Record ID</th>
+            <th>Patient ID</th>
+            <th>Doctor ID</th>
+            <th>Diagnosis</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for record in MedicalRecords %}
+            <tr>
+              <td>{{ record.recordid }}</td>
+              <td>{{ record.patientid }}</td>
+              <td>{{ record.doctorid }}</td>
+              <td>{{ record.diagnosis }}</td>
+              <td>{{ record.date }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No medical records found.</p>
+    {% endif %}
+    
+    <button class="home-button" onclick="window.location.href='/'">Back to Home</button>
+  </div>
+</body>
+</html>

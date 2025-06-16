@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Management</title>
+  <link rel="stylesheet" href="/static/patient_management.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Text -->
+    <h1 class="title">Patient Management</h1>
+
+    <!-- Add new patient form -->
+    <div class="form-container">
+      <form action="/add_patient" method="POST">
+        <input type="text" name="FullName" placeholder="Full Name" required><br>
+        <input type="date" name="DOB" placeholder="Date of Birth" required><br>
+        <select name="Gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select><br>
+        <input type="text" name="ContactNo" placeholder="Contact No" required><br>
+        <input type="text" name="Address" placeholder="Address"><br>
+        <input type="text" name="BloodGroup" placeholder="Blood Group"><br>
+        <input type="text" name="MedicalHistory" placeholder="Medical History"><br>
+        <button type="submit" class="add-patient-btn">Add Patient</button>
+      </form>
+    </div>
+
+    <!-- Buttons to manage patients -->
+    <div class="button-container">
+      <button onclick="window.location.href='/view_all_patients'">See All Patients</button>
+      <button onclick="window.location.href='/view_patient_details'">See Patient Details</button>
+      <button onclick="window.location.href='/edit_patient'">Edit Patient Details</button>
+      <button onclick="window.location.href='/delete_patient'">Delete Patient</button>
+    </div>
+
+    <button class="home-button" onclick="window.location.href='/'">Back to Home</button>
+  </div>
+</body>
+</html>

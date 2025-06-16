@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Appointments</title>
+  <link rel="stylesheet" href="/static/view_appointments.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Appointment Schedule</h1>
+    
+    <!-- Check if there are any appointments -->
+    {% if appointments %}
+      <table>
+        <thead>
+          <tr>
+            <th>Appointment ID</th>
+            <th>Patient ID</th>
+            <th>Doctor ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through each appointment and display their data -->
+          {% for appointment in appointments %}
+            <tr>
+              <td>{{ appointment.appointmentid }}</td>
+              <td> {{ appointment.patientid }}</td>
+              <td> {{ appointment.doctorid }}</td>
+              <td> {{ appointment.appointmentdate }}</td>
+              <td> {{ appointment.timeslot }}</td>
+              <td class="status">{{ appointment.status }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No appointments found.</p>
+    {% endif %}
+    
+    <button class="home-button" onclick="window.location.href='/'">Back to Home</button>
+  </div>
+</body>
+</html>

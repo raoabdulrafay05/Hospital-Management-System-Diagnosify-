@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View All Billing Information</title>
+    <link rel="stylesheet" href="/static/view_all_billing.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Billing Information</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Bill ID</th>
+            <th>Patient ID</th>
+            <th>Bill Date</th>
+            <th>Payment Status</th>
+            <th>Expenses</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for bill in bills %}
+          <tr>
+            <td>{{ bill.billid }}</td>
+            <td>{{ bill.patientid }}</td>
+            <td>{{ bill.billdate }}</td>
+            <td>{{ bill.paymentstatus }}</td>
+            <td>{{ bill.expenses }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-container">
+      <button
+        class="home-button"
+        onclick="window.location.href='/'"
+      >
+        Back to Home
+      </button>
+      <button class="home-button" onclick="window.location.href='/billing'">Back to Billing Management</button>
+    </div>
+  </body>
+</html>

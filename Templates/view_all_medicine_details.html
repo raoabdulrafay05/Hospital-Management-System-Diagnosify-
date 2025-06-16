@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Medicines</title>
+    <link rel="stylesheet" href="/static/view_all_medicine_details.css"> <!-- Link to your external CSS -->
+
+</head>
+<body>
+    <h1>All Medicine Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pharmacy ID</th>
+                <th>Patient ID</th>
+                <th>Medicine Name</th>
+                <th>Quantity</th>
+                <th>Price Per Unit</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medicine in medicines_history %}
+            <tr>
+                <td>{{ medicine.pharmacy_id }}</td>
+                <td>{{ medicine.patientid }}</td>
+                <td>{{ medicine.medicinename }}</td>
+                <td>{{ medicine.quantity }}</td>
+                <td>{{ medicine.priceperunit }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

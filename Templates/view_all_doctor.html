@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View All Doctors</title>
+    <link rel="stylesheet" href="/static/view_all_doctor.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Doctors List</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Doctor ID</th>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Doctor Fee</th>
+            <th>Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for doctor in doctors %}
+          <tr>
+            <td>{{ doctor.doctorid }}</td>
+            <td>{{ doctor.fullname }}</td>
+            <td>{{ doctor.specialization }}</td>
+            <td>{{ doctor.phoneno }}</td>
+            <td>{{ doctor.email }}</td>
+            <td>{{ doctor.doctorfee }}</td>
+            <td>{{ doctor.doctorsalary }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="button-container">
+      <button
+        class="home-button"
+        onclick="window.location.href='/'"
+      >
+        Back to Home
+      </button>
+      <button class="home-button" onclick="window.location.href='/doctor_management'">Back to Doctor Management</button>
+    </div>
+  </body>
+</html>

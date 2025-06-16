@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View All Test Records</title>
+    <link rel="stylesheet" href="/static/view_all_test.css" />
+  </head>
+  <body>
+    <form action="/view_all_lab_tests" method="get">
+
+    <div class="container">
+      <h1>Test Records List</h1>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Test ID</th>
+            <th>Patient ID</th>
+            <th>Test Type</th>
+            <th>Test Result</th>
+            <th>Test Date</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for test in tests %}
+          <tr>
+            <td>{{ test.testid }}</td>
+            <td>{{ test.patientid }}</td>
+            <td>{{ test.testtype }}</td>
+            <td>{{ test.testresult }}</td>
+            <td>{{ test.testdate }}</td>
+            <td>Rs{{ test.testprice }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    </form>
+    <div class="button-container">
+      <button class="home-button" onclick="window.location.href='/'">
+        Back to Home
+      </button>
+      <button class="home-button" onclick="window.location.href='/lab_tests'">
+        Back to Test Management
+      </button>
+    </div>
+  </body>
+</html>
